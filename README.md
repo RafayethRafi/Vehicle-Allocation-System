@@ -39,7 +39,7 @@ A FastAPI-based system for managing company vehicles, drivers, and employee allo
 4. **Configure environment**:
    Create a `.env` file:
    ```env
-   MONGODB_URI="your_mongodb_atlas_uri"
+   MONGODB_URI="mongodb+srv://admin:PuEYEPoWAYGJxXTa@cluster0.r0ohl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
    MONGODB_DB_NAME="vehicle_allocation"
    HOST="0.0.0.0"
    PORT=8000
