@@ -39,7 +39,7 @@ A FastAPI-based system for managing company vehicles, drivers, and employee allo
 4. **Configure environment**:
    Create a `.env` file:
    ```env
-   MONGODB_URI="mongodb+srv://admin:PuEYEPoWAYGJxXTa@cluster0.r0ohl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+   MONGODB_URI="mongodb+srv://username:password@your-cluster.mongodb.net/?retryWrites=true&w=majority&appName=YourApp"
    MONGODB_DB_NAME="vehicle_allocation"
    HOST="0.0.0.0"
    PORT=8000
@@ -47,7 +47,16 @@ A FastAPI-based system for managing company vehicles, drivers, and employee allo
    API_PREFIX="/api"
    ```
 
-5. **Run the application**:
+5. **MongoDB Atlas Setup**
+
+1. Create MongoDB Atlas account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+2. Create a new cluster (free tier works)
+3. Set up database access (create user with password)
+4. Configure network access (add your IP or allow all IPs for development)
+5. Get connection string and update .env file
+
+
+6. **Run the application**:
    ```bash
    # Windows
    python -m app.main --reload
@@ -56,7 +65,7 @@ A FastAPI-based system for managing company vehicles, drivers, and employee allo
    python3 -m app.main --reload
    ```
 
-6. **Access the API documentation**:
+7. **Access the API documentation**:
    - Swagger UI: `http://localhost:8000/docs`
    - ReDoc: `http://localhost:8000/redoc`
 
@@ -273,13 +282,6 @@ POST /api/allocations/report
   ```
 - Returns: Detailed allocation report
 
-## MongoDB Atlas Setup
-
-1. Create MongoDB Atlas account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. Create a new cluster (free tier works)
-3. Set up database access (create user with password)
-4. Configure network access (add your IP or allow all IPs for development)
-5. Get connection string and update .env file
 
 ## Deployment Overview
 
